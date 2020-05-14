@@ -2,6 +2,8 @@
     padding: 0;
     margin: 0;
   }
+
+  /* baground header, body plus animation bordure  */
   body
   {
     width: 100%;
@@ -26,7 +28,9 @@
         background-position: 300px 0px, 0px 116px, 0px 0px, 100% 150px;
       }
     }
+/* fin baground header, body plus animation bordure  */
 
+    /* icone  de navigation  */
   a[href="#"] {
     background-size: contain;
     margin-left: 80px !important;
@@ -36,8 +40,6 @@
     background-image: url("../img/GEEK-WEARS/GEEK-WEARS3x.png")!important;
     background-repeat: no-repeat;
   }
-
-  
 
   a[href="#shoes"] {
     background-size: contain;
@@ -83,7 +85,7 @@
     background-size: contain;
     width: 50px;
     height: 50px;
-    background-image: url("../img/icons/icons8-prix-de-l\'art-100.png")!important;
+    background-image: url("../img/icons/icons8-chevalet-48.png")!important;
 
     background-repeat: no-repeat;
   }
@@ -91,9 +93,10 @@
     background-size: contain;
     width: 50px;
     height: 50px;
-    background-image: url("../img/icons/icons8-email-48.png")!important;
+    background-image: url("../img/icons/icons8-assistant-100.png")!important;
    
     background-repeat: no-repeat;
+    
   }
   a[href="#pacman"] {
     background-size: contain;
@@ -133,4 +136,30 @@ ul{
   position: absolute;
   left: 55%;
 }
-  
+/* fin iconne de navigation  */
+
+/* annimationiconne de  navigations */
+a[href="#shoes"],a[href="#sweat"],a[href="#tee-shirt"],a[href="#accessories"],a[href="#art-print"],a[href="#nous_contacter"]
+{
+  transform: scaleX(-1);
+
+
+ animation:spin-reverse 2s infinite linear;
+  }
+  @keyframes spin-reverse {
+  0% {
+  transform: scaleX(-1) rotate(-30deg);
+  }
+  25%
+  {
+    transform: scaleX(-1) rotate(-15deg);
+  }
+  50%
+  {
+    transform: scaleX(-1) rotate(15deg);
+  }
+  100% {
+  transform: scaleX(-1) rotate(-30deg);
+  }
+}
+/* fin de lannimation des icone */
