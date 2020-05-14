@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+
   }
 
   /* baground header, body plus animation bordure  */
@@ -103,7 +104,7 @@
     width: 80px;
     height: 80px;
     transform: scaleX(-1);
-    background-image: url("../img/GEEK-WEARS/570ef9b000fd654cb6e3b5cae4d88806@2x.png")!important;
+    background-image: url("../img/GEEK-WEARS/pacmanouver.png")!important;
 
     background-repeat: no-repeat;
   }
