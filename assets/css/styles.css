@@ -9,16 +9,116 @@
   }
 
   nav{
-      background-color: red;
+      background-color: #01012A;
       width: 100%;
-      height: 65px;
-
+      height: 120px;
+      border: 5px dashed yellow;
   }
 
-  a[href="#shoes"] {
-    width: 250px;
-    height: 250px;
-    background-image: url("../img/icons/icons8-baskets-64\ \(1\).png")!important;
-    display: block;
+  a[href="#"] {
+    background-size: contain;
+    margin-left: 80px !important;
+    margin-top: 5px !important;
+    width: 450px;
+    height: 110px;
+    background-image: url("../img/GEEK-WEARS/GEEK-WEARS3x.png")!important;
     background-repeat: no-repeat;
   }
+
+  
+
+  a[href="#shoes"] {
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/icons/icons8-baskets-64\ \(1\).png")!important;
+  
+    background-repeat: no-repeat;
+  }
+  a[href="#tee-shirt"] {
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/icons/icons8-t-shirt-48.png")!important;
+
+    background-repeat: no-repeat;
+  }
+  a[href="#sweat"] {
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/icons/icons8-veste-48.png")!important;
+
+    background-repeat: no-repeat;
+  }
+  a[href="#accessories"] {
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/icons/icons8-casquette-de-baseball-48.png")!important;
+   
+    background-repeat: no-repeat;
+  }
+  a[href="#accessories"] {
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/icons/icons8-casquette-de-baseball-48.png")!important;
+    
+    background-repeat: no-repeat;
+  }
+  a[href="#art-print"] {
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/icons/icons8-prix-de-l\'art-100.png")!important;
+
+    background-repeat: no-repeat;
+  }
+  a[href="#nous_contacter"] {
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/icons/icons8-email-48.png")!important;
+   
+    background-repeat: no-repeat;
+  }
+  a[href="#pacman"] {
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+    transform: scaleX(-1);
+    background-image: url("../img/GEEK-WEARS/570ef9b000fd654cb6e3b5cae4d88806@2x.png")!important;
+
+    background-repeat: no-repeat;
+  }
+  nav{
+    display: flex !important;
+    flex-direction: row;
+
+  }
+  a,ul{
+   margin-right: 30px;
+    margin-top: 20px;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+
+}
+header
+{
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    font-size: large;
+
+
+}
+ul{
+  position: absolute;
+  left: 55%;
+}
+  
