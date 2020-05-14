@@ -27,9 +27,13 @@ for (let i = 0; i < list.length; i++) {
     var menuList = document.createElement('a');
 
      menuList.href=list[i];
-     menuList.textContent=anchor[i];
+    //  menuList.textContent=anchor[i];
 
     menu.appendChild(menuList);
 }
 document.querySelector('a').insertAdjacentElement('afterend', menu);
+// document.get('a').insertAdjacentElement('afterend', menu);
+// var img1 = document.createElement("img");
+// img1.src="https://img.icons8.com/cotton/64/000000/sneakers--v2.png";
+// document.getElementsByTagName("a[href='#shoes']").insertAdjacentElement('afterend',img1);
 

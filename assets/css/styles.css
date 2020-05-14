@@ -16,8 +16,9 @@
   }
 
   a[href="#shoes"] {
- width: 250px;
- height: 250px;
+    width: 250px;
+    height: 250px;
     background-image: url("../img/icons/icons8-baskets-64\ \(1\).png")!important;
-    background-color: purple;
+    display: block;
+    background-repeat: no-repeat;
   }
