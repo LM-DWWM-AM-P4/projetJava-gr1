@@ -19,7 +19,7 @@
       background-size: 50px 4px, 50px 4px, 4px 50px, 4px 50px;
       background-position: 0px 0px, 100% 100%, 0px 100px, 100% 0px;
       animation: border-dance 8s infinite linear;
-      background-color: #01012A;
+      background-color: #01012A !important;
     }
     @keyframes border-dance {
       0% {
@@ -34,72 +34,65 @@
     /* icone  de navigation  */
   a[href="#"] {
     background-size: contain;
-    margin-left: 80px !important;
-    margin-top: 5px !important;
     width: 450px;
     height: 110px;
-    background-image: url("../img/GEEK-WEARS/GEEK-WEARS3x.png")!important;
+    margin-top: 50px;
+    background-image: url("https://fontmeme.com/permalink/200515/e8397339c9318d69242faad300b1d371.png")!important;
     background-repeat: no-repeat;
   }
 
   a[href="#shoes"] {
     background-size: contain;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
+    top: 5px;
     background-image: url("../img/icons/icons8-baskets-64\ \(1\).png")!important;
   
     background-repeat: no-repeat;
   }
   a[href="#tee-shirt"] {
     background-size: contain;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     background-image: url("../img/icons/icons8-t-shirt-48.png")!important;
 
     background-repeat: no-repeat;
   }
   a[href="#sweat"] {
     background-size: contain;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     background-image: url("../img/icons/icons8-veste-48.png")!important;
 
     background-repeat: no-repeat;
   }
+
   a[href="#accessories"] {
     background-size: contain;
-    width: 50px;
-    height: 50px;
-    background-image: url("../img/icons/icons8-casquette-de-baseball-48.png")!important;
-   
-    background-repeat: no-repeat;
-  }
-  a[href="#accessories"] {
-    background-size: contain;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     background-image: url("../img/icons/icons8-casquette-de-baseball-48.png")!important;
     
     background-repeat: no-repeat;
   }
   a[href="#art-print"] {
     background-size: contain;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     background-image: url("../img/icons/icons8-chevalet-48.png")!important;
 
     background-repeat: no-repeat;
   }
   a[href="#nous_contacter"] {
     background-size: contain;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     background-image: url("../img/icons/icons8-assistant-100.png")!important;
    
     background-repeat: no-repeat;
     
   }
-  a[href="#pacman"] {
+  /* a[href="#pacman"] {
     background-size: contain;
     width: 80px;
     height: 80px;
@@ -107,15 +100,15 @@
     background-image: url("../img/GEEK-WEARS/pacmanouver.png")!important;
 
     background-repeat: no-repeat;
-  }
+  } */
   nav{
     display: flex !important;
     flex-direction: row;
 
   }
   a,ul{
-   margin-right: 30px;
-    margin-top: 20px;
+   margin-right: 70px;
+    /* margin-top: 20px; */
     text-decoration: none;
     list-style: none;
     display: flex;
@@ -124,18 +117,10 @@
     color: whitesmoke;
 
 }
-header
-{
-    position: fixed;
-    width: 100%;
-    height: 90px;
-    font-size: large;
 
-
-}
 ul{
   position: absolute;
-  left: 55%;
+  left: 45%;
 }
 /* fin iconne de navigation  */
 
@@ -164,3 +149,16 @@ a[href="#shoes"],a[href="#sweat"],a[href="#tee-shirt"],a[href="#accessories"],a[
   }
 }
 /* fin de lannimation des icone */
+
+.bg-image
+{
+  background-image: url("../img/GEEK-WEARS/Rectangle\ 3@2x.png");
+  background-repeat: no-repeat;
+ 
+  background-size: auto;
+  background-position: center;
+}
+.bg-img
+{
+  background-image: url("../img/GEEK-WEARS/Rectangle\ 4@2x.png");
+}
