@@ -1,11 +1,6 @@
 * {
     padding: 0;
     margin: 0;
-    @font-face {
-        font-family: "7Segment";
-        src: url("assets/police/7Segment.ttf") format("ttf"),;
-       }
-       font-family: ;
 }
 
 /* baground header, body plus animation bordure  */
@@ -350,7 +345,3 @@ a[href="#nous_contacter"] {
 }
 
 /* fin de gameboy */
-.z-index
-{
-
-}

@@ -31,6 +31,7 @@ let modalButton = document.createElement('button');
 modalButton.className="btn btn-primary mb-3";
 modalButton.dataset.toggle = 'modal';
 modalButton.dataset.target = '#exampleModalLong';
+modalButton.id='modal-panier';
 menu.appendChild(modalButton);
 document.querySelector('ul').insertAdjacentElement('afterend', menu);
 // fin de la créationdu bouton 
@@ -99,10 +100,8 @@ let childDivModalButtonSave = document.createElement('button');
     childDivModalContenerFooter.appendChild(childDivModalButtonSave);
     
     
-document.querySelector('ul').insertAdjacentElement('afterbegin', divParentModal);
+document.querySelector('header').insertAdjacentElement('afterbegin', divParentModal);
 // fin de la creation modal panier
-
-
 
 
 // PacMan Menu
