@@ -14,9 +14,9 @@
   nav{
       width: 100%;
       height: 120px;
-      background: linear-gradient(90deg, yellow 50%, red 50%), linear-gradient(90deg, yellow 50%, red 50%), linear-gradient(0deg, yellow 50%, red 50%), linear-gradient(0deg, yellow 50%, red 50%);
+      background: linear-gradient(90deg, yellow 25%, violet 25%, blue 25%, red 25%), linear-gradient(90deg, yellow 25%, violet 25%, blue 25%, red 25%), linear-gradient(0deg, yellow 25%, violet 25%, blue 25%, red 25%), linear-gradient(0deg, yellow 25%, violet 25%, blue 25%, red 25%);
       background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-      background-size: 50px 4px, 50px 4px, 4px 50px, 4px 50px;
+      background-size: 20px 4px, 20px 4px, 4px 20px, 4px 20px;
       background-position: 0px 0px, 100% 100%, 0px 100px, 100% 0px;
       animation: border-dance 8s infinite linear;
       background-color: #01012A !important;
@@ -176,5 +176,5 @@ a[href="#shoes"],a[href="#sweat"],a[href="#tee-shirt"],a[href="#accessories"],a[
 
 .rotate
 {
-  rotate: -90deg;
+  rotate: 270deg;
 }
