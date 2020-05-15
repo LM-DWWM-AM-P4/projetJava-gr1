@@ -21,6 +21,7 @@ for (let i = 0; i < list.length; i++) {
 }
 document.querySelector('a').insertAdjacentElement('afterend', menu);
 
+/*
 let gameBoy = document.createElement('div');
 gameBoy.id="gameboy";
 document.querySelector('main').insertAdjacentElement("afterbegin",gameBoy);
@@ -38,13 +39,45 @@ document.getElementById('gameboy').insertAdjacentElement("afterbegin",vitre);
 document.getElementById('vitre').style.width="416px";
 document.getElementById('vitre').style.height="324px";
 document.getElementById('vitre').className=" mt-3 bg-img";
-
+*/
 
 var pacman = document.getElementById('#pacman');
 pacman.addEventListener('click', function(){
     pacman.className="rotate";
 
 });
+
+/* gameboy */
+
+let gameboy = document.createElement('div');
+gameboy.className = 'gameboy';
+main.appendChild(gameboy);
+
+let screen = document.createElement('div');
+screen.className = 'screen';
+gameboy.appendChild(screen);
+
+let dpad = document.createElement('div');
+dpad.className = 'dpad';
+gameboy.appendChild(dpad);
+
+let bevel = document.createElement('div');
+bevel.className = 'bevel';
+gameboy.appendChild(bevel);
+
+let btn1 = document.createElement('div');
+btn1.className = 'btn1';
+gameboy.appendChild(btn1);
+
+let btn2 = document.createElement('div');
+btn2.className = 'btn2';
+gameboy.appendChild(btn2);
+
+/* fin gameboy */
+
+
+/* let articles = ["Tee-shirt Addict", "Tee-shirt Air", "Tee-shirt Champignon", "Tee-shirt Dino", "Tee-shirt Geek", "Tee-shirt Replay", "Sweat Alice", "Sweat Geek", "Sweat Mario", "Sweat Donkey kong", "Sweat Blanche Neige", "Sweat Breaking Bad", "Basket America", "Basket Batman", "Basket Flash", "Basket Flash2", "Basket Ironman", "Basket Superman", "Casquette Champignon", "Casquette Love", "Casquette Mario noire", "Casquette Mario rouge", "Art-Print Apple Juice", "Art-Print Cooking Time", "Art-Print Link Floyd", "Art-Print Msociety", "Art-Print TWD", "Art-Print Wise Monkey"]; */
+
 
 
 
@@ -65,6 +98,7 @@ pacman.addEventListener('click', function(){
 
         let imgcard = document.createElement('img');
         imgcard.className="card-img-top";
+        imgcard.src="assets/img/images_articles/"+i+".jpg";
         childDiv.appendChild(imgcard);
 
         let divContainer = document.createElement('div');
@@ -72,13 +106,13 @@ pacman.addEventListener('click', function(){
         childDiv.appendChild(divContainer);
 
         let title = document.createElement('h5');
-        title.className="card-title";
+        title.className="card-title text-center h5 font-weight-bold text-uppercase";
         title.textContent=articles[i];
         childDiv.appendChild(title);
 
         let Descript = document.createElement('p');
-        Descript.className="card-text";
-        Descript.textContent="Some quick example text to build on the card title and make up the bulk of the card's content.";
+        Descript.className="card-text font-weight-light";
+        Descript.innerHTML="Some quick example text to build on the card title and make up the bulk of the card's content.<br><i><b>Ref.00"+i;
         childDiv.appendChild(Descript);
 
         let price = document.createElement('p');
