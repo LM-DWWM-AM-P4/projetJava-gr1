@@ -1,0 +1,161 @@
+@media (max-width: 480px) 
+{
+    a
+    {
+        visibility: hidden;
+    }
+     a[href="#"]
+    {
+         visibility: visible;
+         display: flex;
+         justify-content: center;
+         margin-top: 35px;
+    }
+    a[href="#pacman"] 
+        {
+        position: absolute;
+        left: 130px;
+        top: 15px;
+        visibility: visible;
+        background-size: contain;
+        width: 70px;
+        height: 70px;
+        transform: scaleX(-1);
+        background-image: url("../img/GEEK-WEARS/pacmanouver.png")!important;
+        background-repeat: no-repeat;
+    } 
+
+}
+
+@media (min-width: 768px) 
+{
+    a
+    {
+        visibility: hidden;
+    }
+     a[href="#"]
+    {
+         visibility: visible;
+         display: flex;
+         justify-content: center;
+         margin-top: 35px;
+    }
+    a[href="#pacman"] 
+        {
+        position: absolute;
+        left: 250px;
+        top: 20px;
+        visibility: visible;
+        background-size: contain;
+        width: 70px;
+        height: 70px;
+        transform: scaleX(-1);
+        background-image: url("../img/GEEK-WEARS/pacmanouver.png")!important;
+        background-repeat: no-repeat;
+    } 
+
+}
+
+@media (max-width: 350px) 
+{
+    a
+    {
+        visibility: hidden;
+    }
+     a[href="#"]
+    {
+         visibility: visible;
+         display: flex;
+         justify-content: center;
+         margin-top: 35px;
+    }
+    a[href="#pacman"] 
+        {
+        position: absolute;
+        left: 100px;
+        top: 25px;
+        visibility: visible;
+        background-size: contain;
+        width: 40px;
+        height: 40px;
+        transform: scaleX(-1);
+        background-image: url("../img/GEEK-WEARS/pacmanouver.png")!important;
+        background-repeat: no-repeat;
+    } 
+
+}
+
+
+@media (min-width: 1440px) 
+{
+    a
+    {
+        visibility:visible ;
+
+    }
+     a[href="#"]
+    {
+         visibility: visible;
+         display: flex;
+         justify-content: center;
+         margin-top: 35px;
+    }
+    a[href="#pacman"] 
+    {
+    visibility: hidden;
+    }
+    a,ul
+    {
+        margin-right: 20px;
+    }
+
+}
+
+@media (min-width: 1280px) 
+{
+    a
+    {
+        visibility:visible;
+
+    }
+     a[href="#"]
+    {
+         visibility: visible;
+         display: flex;
+         justify-content: center;
+         margin-top: 35px;
+    }
+    a[href="#pacman"] 
+    {
+    visibility: hidden;
+    }
+    a,ul
+    {
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 1500px) 
+{
+    a
+    {
+        visibility:visible;
+
+    }
+     a[href="#"]
+    {
+        margin-left: 50px;
+         visibility: visible;
+         display: flex;
+         justify-content: center;
+         margin-top: 50px;
+    }
+    a[href="#pacman"] 
+    {
+    visibility: hidden;
+    }
+    a,ul
+    {
+        margin-right: 70px;
+    }
+}

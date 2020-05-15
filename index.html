@@ -1,35 +1,79 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GEEK-WEAR'S</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/screen.css">
 </head>
+
 <body>
-   
-    
+
+
     <header id="header">
-        <canvas id="cavas"></canvas>
+        <!-- <canvas id="cavas"></canvas> -->
     </header>
 
     <main id="main">
-        
-           <div id="tee-shirt"></div>
-           <div id="sweat"> </div>
-           <div id="shoes"></div>
-           <div id="accessories"></div>
-           <div id="art-print"></div> 
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+                <img src="assets/img/images articles/tee-shirt/tee-shirt-otaku-addict-blanc.jpg" alt="">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <select name="" id="">
+                  <option value="XS">XS</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+              </select>
+              <button class="btn btn-primary">AJOUTER AU PANIER 45,00€</button>
+            </div>
+          </div>
     </main>
 
     <footer>
         <!-- <canvas id="c"></canvas> -->
     </footer>
 
+    <p id="demo"></p>
+
+<script>
+var myObj, i, j, x = "";
+myObj = {
+  "name":"John",
+  "age":30,
+  "cars": [
+    {"name":"Ford", "models":["Fiesta", "Focus", "Mustang"]},
+    {"name":"BMW", "models":["320", "X3", "X5"]},
+    {"name":"Fiat", "models":["500", "Panda"] }
+  ]
+}
+for (i in myObj.cars) {
+  x += "<h2>" + myObj.cars[i].name + "</h2>";
+  for (j in myObj.cars[i].models) {
+    x += myObj.cars[i].models[j] + "<br>";
+  }
+}
+document.getElementById("demo").innerHTML = x;
+</script>
     <script src="assets/js/script.js"></script>
     <!-- <script src="assets/js/canvas.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.5.10/cleave.min.js%22%3E"></script>
-    <script src="assets/js/script-gb.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>
