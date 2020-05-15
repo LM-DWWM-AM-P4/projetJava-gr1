@@ -14,7 +14,7 @@ let list = ['#tee-shirt','#sweat','#shoes','#accessories', '#art-print','#nous_c
 for (let i = 0; i < list.length; i++) {
     var menuList = document.createElement('a');
 
-     menuList.href=list[i];
+    menuList.href=list[i];
     menuList.id = list[i]; 
 
     menu.appendChild(menuList);
@@ -127,8 +127,23 @@ gameboy.appendChild(btn2);
         panier.style.width="80%";
         panier.style.margin="auto";
         panier.textContent="Ajouter au panier !";
+        panier.onclick = "" ;
         panier.id="article" + i;
         childDiv.appendChild(panier);
     }
     document.querySelector('main').insertAdjacentElement("afterbegin",divparent );
 // fin de la craetion de test 
+
+
+// jouer un song a chaque fois quil est dans le panier
+var audio = new Audio('assets/song/piece.mp3');
+var btn = document.querySelectorAll('button')
+
+for (let i = 0; i < 28; i++) {
+    btn[i].addEventListener('click', updateBtn);
+}
+function updateBtn() 
+{
+    audio.play();
+}
+// fin de song
