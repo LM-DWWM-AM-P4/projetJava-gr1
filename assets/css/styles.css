@@ -32,6 +32,26 @@ nav {
     }
 }
 
+
+    .border_yellow:hover
+    {
+        width: auto;
+        height: auto;
+        background: linear-gradient(90deg, yellow 50%, red 50%), linear-gradient(90deg, yellow 50%, red 50%), linear-gradient(0deg, yellow 50%, red 50%), linear-gradient(0deg, yellow 50%, red 50%);
+        background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+        background-size: 50px 4px, 50px 4px, 4px 50px, 4px 50px;
+        background-position: 0px 0px, 100% 100%, 0px 100px, 100% 0px;
+        animation: border-dance 8s infinite linear;
+        background-color: #01012A !important;
+      }
+      @keyframes border-dance {
+        0% {
+          background-position: 0px 0px, 300px 116px, 0px 150px, 100% 0px;
+        }
+        100% {
+          background-position: 300px 0px, 0px 116px, 0px 0px, 100% 150px;
+        }
+    }
 /* fin baground header, body plus animation bordure  */
 
 /* icone  de navigation  */
