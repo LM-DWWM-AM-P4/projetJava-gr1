@@ -214,3 +214,6 @@ function updateBtn()
     audio.play();
 }
 // fin de song
+
+var audio1 = new Audio('assets/song/stratup.mp3');
+audio1.play();
