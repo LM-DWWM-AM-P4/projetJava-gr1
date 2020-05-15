@@ -92,15 +92,6 @@
     background-repeat: no-repeat;
     
   }
-  /* a[href="#pacman"] {
-    background-size: contain;
-    width: 80px;
-    height: 80px;
-    transform: scaleX(-1);
-    background-image: url("../img/GEEK-WEARS/pacmanouver.png")!important;
-
-    background-repeat: no-repeat;
-  } */
   nav{
     display: flex !important;
     flex-direction: row;
@@ -161,4 +152,9 @@ a[href="#shoes"],a[href="#sweat"],a[href="#tee-shirt"],a[href="#accessories"],a[
 .bg-img
 {
   background-image: url("../img/GEEK-WEARS/Rectangle\ 4@2x.png");
+}
+
+.rotate
+{
+  rotate: -90deg;
 }
