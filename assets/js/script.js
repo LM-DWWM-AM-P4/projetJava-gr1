@@ -59,6 +59,7 @@ let childDivModal = document.createElement('div');
         
 let childDivModalContent = document.createElement('div');
     childDivModalContent.className="modal-content";
+    childDivModalContent.id="panier";
     childDivModal.appendChild(childDivModalContent)
 
 let childDivModalHeader = document.createElement('div');
