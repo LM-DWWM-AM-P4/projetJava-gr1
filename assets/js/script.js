@@ -52,10 +52,16 @@ document.querySelector('ul').insertAdjacentElement('afterend', menu);
 
 // creationde span pour les notification article panier
 let notify = document.createElement('span');
-notify.textContent = '99+';
+notify.textContent = '15';
 notify.id='notify';
 modalButton.appendChild(notify);
 // fin de lacreationde notification 
+
+// condition si le panier est  vide
+if (notify.textContent == '') {
+    notify.className ="notifyTrue";
+}
+// fin de la condition 
 
 // création de la modal panier
 let divParentModal = document.createElement('div');

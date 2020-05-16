@@ -131,6 +131,12 @@ body {
     transform: scaleX(-1);
 }
 
+.notifyTrue
+{
+    visibility: hidden;
+}
+
+/* fin Creation de notification pour le panier  */
 
 
 /* Fin de placement modal Panier */
