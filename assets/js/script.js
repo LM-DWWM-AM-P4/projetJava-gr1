@@ -1,3 +1,8 @@
+// demarage du site
+var audio1 = new Audio('assets/song/stratup.mp3');
+audio1.play();
+// fin demarage du site 
+
 // creation de la nav-bar 
 let body = document.querySelector('body');
 let nav = document.createElement('nav');
@@ -194,7 +199,7 @@ gameboy.appendChild(btn2);
         panier.style.width="80%";
         panier.style.margin="auto";
         panier.textContent="Ajouter au panier !";
-        panier.onclick = "" ;
+        panier.setAttribute('onclick','audio.play()');
         panier.id="article" + i;
         childDiv.appendChild(panier);
     }
@@ -202,18 +207,6 @@ gameboy.appendChild(btn2);
 // fin de la craetion de test 
 
 
-// jouer un song a chaque fois quil est dans le panier
+// jouer un song a chaque ajout au panier
 var audio = new Audio('assets/song/piece.mp3');
-var btn = document.querySelectorAll('button')
-
-for (let i = 0; i < 28; i++) {
-    btn[i].addEventListener('click', updateBtn);
-}
-function updateBtn() 
-{
-    audio.play();
-}
 // fin de song
-
-var audio1 = new Audio('assets/song/stratup.mp3');
-audio1.play();
