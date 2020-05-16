@@ -29,7 +29,15 @@ for (let i = 0; i < list.length; i++) {
 document.querySelector('a').insertAdjacentElement('afterend', menu);
 // fin nav-bar
 
-
+// static
+function static(){
+    document.getElementById('modal-panier').className="btn btn-primary mb-3 static";
+}
+// fin static
+function nostatic(){
+    document.getElementById('modal-panier').className="btn btn-primary mb-3 static";
+}
+// -----------------------------------------------------------------------------------
 
 // creation du boutton mdal pour le panier 
 let modalButton = document.createElement('button');
@@ -37,11 +45,17 @@ modalButton.className="btn btn-primary mb-3";
 modalButton.dataset.toggle = 'modal';
 modalButton.dataset.target = '#exampleModalLong';
 modalButton.id='modal-panier';
+modalButton.setAttribute('onclick','static()');
 menu.appendChild(modalButton);
 document.querySelector('ul').insertAdjacentElement('afterend', menu);
 // fin de la créationdu bouton 
 
-
+// creationde span pour les notification article panier
+let notify = document.createElement('span');
+notify.textContent = '99+';
+notify.id='notify';
+modalButton.appendChild(notify);
+// fin de lacreationde notification 
 
 // création de la modal panier
 let divParentModal = document.createElement('div');

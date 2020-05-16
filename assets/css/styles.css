@@ -100,6 +100,13 @@ body {
 
 
 /* finde l'animatio */
+
+/* class static */
+.static
+{
+    animation: none !important;
+}
+/* ----------- */
 /* --------------------------------------------------------------------------------------------------------- */
 /* Placement modal Panier */
 #panier
@@ -108,6 +115,21 @@ body {
     top: 92px;
 }
 
+/* Creation de notification pour le panier  */
+#notify
+{
+    display: block;
+    width:35px ;
+    height: 35px;
+    margin-top: 41px;
+    margin-left: -16px;
+    background-color: white;
+    border: 3px solid black;
+    color: black;
+    font-weight: 900;
+    border-radius: 50%;
+    transform: scaleX(-1);
+}
 
 
 
