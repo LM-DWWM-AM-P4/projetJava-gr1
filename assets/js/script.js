@@ -94,7 +94,6 @@ let childDivModalSpan = document.createElement('Span');
 
 let childDivModalContenerShop = document.createElement('div');
     childDivModalContenerShop.className="modal-body";
-    childDivModalContenerShop.textContent="modal-bodymodal-bodymodal-bodymodal-bodymodal-bodymodal-bodymodal-body"
     childDivModalContent.appendChild(childDivModalContenerShop);
 
 let childDivModalContenerFooter = document.createElement('div');
@@ -263,19 +262,23 @@ form.appendChild(formBtn);
 
 // fin de formulaire
 
-// fonction pour ajouter au panier
 
+
+
+// fonction pour ajouter au panier
 // ajout  dun son
 var audio = new Audio('assets/song/piece.mp3');
 // fin de song
 var i = 0;
+
 function updateBtn() 
 {
-    
-    i++;
-    notify.textContent = i;
     audio.play();
-    
+
+    i++;
+
+    notify.textContent = i;
+
 
     if (i > 0)
     {
@@ -287,8 +290,15 @@ function updateBtn()
         console.log('+99');
         notify.textContent = "99+";
     }
-        
-    console.log(i);
+
+
+        let childDivModalContenerArticles = document.createElement('div');
+        childDivModalContenerArticles.className="modal-body";
+        childDivModalContenerArticles.textContent="modal-bodymodal-bodymodal-bodymodal-bodymodal-bodymodal-bodymodal-body"
+        childDivModalContenerShop.appendChild(childDivModalContenerArticles);
+
+    
+
 }
 // jouer un song a chaque ajout au panier
 
@@ -298,13 +308,6 @@ notify.id='notify';
 modalButton.appendChild(notify);
 // fin de lacreationde notification 
 
-    
-
-
-// condition si le panier est  vide
-
-
-// fin de la condition 
 
 
 
