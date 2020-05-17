@@ -52,7 +52,7 @@ document.querySelector('ul').insertAdjacentElement('afterend', menu);
 
 // creationde span pour les notification article panier
 let notify = document.createElement('span');
-notify.textContent = '15';
+notify.textContent = '91';
 notify.id='notify';
 modalButton.appendChild(notify);
 // fin de lacreationde notification 
@@ -172,8 +172,6 @@ gameboy.appendChild(btn2);
 /* let articles = ["Tee-shirt Addict", "Tee-shirt Air", "Tee-shirt Champignon", "Tee-shirt Dino", "Tee-shirt Geek", "Tee-shirt Replay", "Sweat Alice", "Sweat Geek", "Sweat Mario", "Sweat Donkey kong", "Sweat Blanche Neige", "Sweat Breaking Bad", "Basket America", "Basket Batman", "Basket Flash", "Basket Flash2", "Basket Ironman", "Basket Superman", "Casquette Champignon", "Casquette Love", "Casquette Mario noire", "Casquette Mario rouge", "Art-Print Apple Juice", "Art-Print Cooking Time", "Art-Print Link Floyd", "Art-Print Msociety", "Art-Print TWD", "Art-Print Wise Monkey"]; */
 
 
-
-
 // creation des card en js 
 
     // initialiser une variable div
@@ -215,19 +213,33 @@ gameboy.appendChild(btn2);
         price.style.fontWeight="bold";
         childDiv.appendChild(price);
 
-        let panier = document.createElement('button');
+        var panier = document.createElement('button');
         panier.className="btn btn-primary mb-3 border_yellow";
         panier.style.width="80%";
         panier.style.margin="auto";
         panier.textContent="Ajouter au panier !";
-        panier.setAttribute('onclick','audio.play()');
         panier.id="article" + i;
         childDiv.appendChild(panier);
     }
     document.querySelector('main').insertAdjacentElement("afterbegin",divparent );
 // fin de la craetion de test 
 
+// condition pour ajouter au pannier 
+// jouer un song a chaque fois quil est dans le panier plus ajout 
+var btn = document.querySelectorAll('button');
 
+for (let i = 0; i < 28; i++) {
+    if (btn[i].textContent == "Ajouter au panier !" ) {
+        btn[i].addEventListener('click', updateBtn);
+    }
+}
+function updateBtn() 
+{
+    console.log('clicker');
+    audio.play();
+}
+// fin de song
 // jouer un song a chaque ajout au panier
+
 var audio = new Audio('assets/song/piece.mp3');
 // fin de song
