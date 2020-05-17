@@ -1,8 +1,9 @@
+/* initialisation a 0 de tout les element */
 * {
     padding: 0;
     margin: 0;
 }
-
+/* --------------------------------------------------------------------------------------------------------- */
 /* baground header, body plus animation bordure  */
 body {
     width: 100%;
@@ -54,7 +55,92 @@ body {
         }
     }
 /* fin baground header, body plus animation bordure  */
+/* --------------------------------------------------------------------------------------------------------- */
+/* Icone panier */
+#modal-panier
+{
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+    background-color: transparent;
+    border: none;
+    background-image: url("../img/icons/icons8-panier-96.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
+}
+/* fin icone  panier  */
+/* --------------------------------------------------------------------------------------------------------- */
+/* annimation Panier */
+#modal-panier {
+    transform: scaleX(-1);
+
+
+    animation: spin-reverse 2s infinite linear;
+}
+
+@keyframes spin-reverse {
+    0% {
+        transform: scaleX(-1) rotate(-30deg);
+    }
+
+    25% {
+        transform: scaleX(-1) rotate(-15deg);
+    }
+
+    50% {
+        transform: scaleX(-1) rotate(15deg);
+    }
+
+    100% {
+        transform: scaleX(-1) rotate(-30deg);
+    }
+}
+
+
+/* finde l'animatio */
+
+/* class static */
+.static
+{
+    animation: none !important;
+}
+/* ----------- */
+/* --------------------------------------------------------------------------------------------------------- */
+/* Placement modal Panier */
+#panier
+{
+    left: 716px;
+    top: 92px;
+}
+
+/* Creation de notification pour le panier  */
+#notify
+{
+    display: block;
+    width:35px ;
+    height: 35px;
+    margin-top: 41px;
+    margin-left: -16px;
+    background-color: white;
+    border: 3px solid black;
+    color: black;
+    font-weight: 900;
+    border-radius: 50%;
+    transform: scaleX(-1);
+}
+
+.notifyTrue
+{
+    visibility: hidden;
+}
+
+/* fin Creation de notification pour le panier  */
+
+
+/* Fin de placement modal Panier */
+/* --------------------------------------------------------------------------------------------------------- */
 /* icone  de navigation  */
 a[href="#"] {
     background-size: contain;
@@ -147,7 +233,7 @@ ul {
 }
 
 /* fin icone de navigation  */
-
+/* --------------------------------------------------------------------------------------------------------- */
 /* annimationiconne de  navigations */
 a[href="#shoes"],
 a[href="#sweat"],
@@ -185,7 +271,7 @@ a[href="#nous_contacter"] {
 }
 
 /* fin de lannimation des icone */
-
+/* --------------------------------------------------------------------------------------------------------- */
 /* début de la gameboy */
 
 .gameboy {
@@ -382,3 +468,7 @@ input, textarea {
     font-size: 0.8em;
     float: right;
 }
+
+/* fin de formulaire */
+
+/* --------------------------------------------------------------------------------------------------------- */

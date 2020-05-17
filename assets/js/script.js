@@ -1,3 +1,8 @@
+// demarage du site
+var audio1 = new Audio('assets/song/stratup.mp3');
+audio1.play();
+// fin demarage du site 
+
 // creation de la nav-bar 
 let body = document.querySelector('body');
 let nav = document.createElement('nav');
@@ -24,7 +29,15 @@ for (let i = 0; i < list.length; i++) {
 document.querySelector('a').insertAdjacentElement('afterend', menu);
 // fin nav-bar
 
-
+// static
+function static(){
+    document.getElementById('modal-panier').className="btn btn-primary mb-3 static";
+}
+// fin static
+function nostatic(){
+    document.getElementById('modal-panier').className="btn btn-primary mb-3 static";
+}
+// -----------------------------------------------------------------------------------
 
 // creation du boutton mdal pour le panier 
 let modalButton = document.createElement('button');
@@ -32,11 +45,23 @@ modalButton.className="btn btn-primary mb-3";
 modalButton.dataset.toggle = 'modal';
 modalButton.dataset.target = '#exampleModalLong';
 modalButton.id='modal-panier';
+modalButton.setAttribute('onclick','static()');
 menu.appendChild(modalButton);
 document.querySelector('ul').insertAdjacentElement('afterend', menu);
 // fin de la créationdu bouton 
 
+// creationde span pour les notification article panier
+let notify = document.createElement('span');
+notify.textContent = '15';
+notify.id='notify';
+modalButton.appendChild(notify);
+// fin de lacreationde notification 
 
+// condition si le panier est  vide
+if (notify.textContent == '') {
+    notify.className ="notifyTrue";
+}
+// fin de la condition 
 
 // création de la modal panier
 let divParentModal = document.createElement('div');
@@ -54,6 +79,7 @@ let childDivModal = document.createElement('div');
         
 let childDivModalContent = document.createElement('div');
     childDivModalContent.className="modal-content";
+    childDivModalContent.id="panier";
     childDivModal.appendChild(childDivModalContent)
 
 let childDivModalHeader = document.createElement('div');
@@ -194,7 +220,7 @@ gameboy.appendChild(btn2);
         panier.style.width="80%";
         panier.style.margin="auto";
         panier.textContent="Ajouter au panier !";
-        panier.onclick = "" ;
+        panier.setAttribute('onclick','audio.play()');
         panier.id="article" + i;
         childDiv.appendChild(panier);
     }
@@ -247,17 +273,8 @@ form.appendChild(formBtn);
 
 // fin de formulaire
 
-// jouer un song a chaque fois quil est dans le panier
+// jouer un song a chaque ajout au panier
 var audio = new Audio('assets/song/piece.mp3');
-var btn = document.querySelectorAll('button')
-
-for (let i = 0; i < 28; i++) {
-    btn[i].addEventListener('click', updateBtn);
-}
-function updateBtn() 
-{
-    audio.play();
-}
 // fin de song
 
 var audio1 = new Audio('assets/song/stratup.mp3');
