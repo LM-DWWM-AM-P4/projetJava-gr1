@@ -1,9 +1,9 @@
-// demarage du site
+// démarrage du site
 var audio1 = new Audio('assets/song/stratup.mp3');
 audio1.play();
-// fin demarage du site 
+// fin démarrage du site 
 
-// creation de la nav-bar 
+// création de la nav-bar 
 let body = document.querySelector('body');
 let nav = document.createElement('nav');
 nav.className="navbar navbar-expand-lg navbar-light fixed-top";
@@ -39,7 +39,7 @@ function nostatic(){
 }
 // -----------------------------------------------------------------------------------
 
-// creation du boutton mdal pour le panier 
+// création du bouton modal pour le panier 
 let modalButton = document.createElement('button');
 modalButton.className="btn btn-primary mb-3";
 modalButton.dataset.toggle = 'modal';
@@ -48,8 +48,7 @@ modalButton.id='modal-panier';
 modalButton.setAttribute('onclick','static()');
 menu.appendChild(modalButton);
 document.querySelector('ul').insertAdjacentElement('afterend', menu);
-// fin de la créationdu bouton 
-
+// fin de la création du bouton 
 
 // création de la modal panier
 let divParentModal = document.createElement('div');
@@ -113,9 +112,8 @@ let childDivModalButtonSave = document.createElement('button');
     childDivModalButtonSave.textContent="Commander"
     childDivModalContenerFooter.appendChild(childDivModalButtonSave);
     
-    
 document.querySelector('header').insertAdjacentElement('afterbegin', divParentModal);
-// fin de la creation modal panier
+// fin de la création modal panier
 
 
 // PacMan Menu
@@ -125,10 +123,7 @@ pacman.addEventListener('click', function(){
 });
 // Fin du PacMan Menu
 
-
-
-/* gameboy */
-
+// gameboy
 let gameboy = document.createElement('div');
 gameboy.className = 'gameboy';
 gameboy.style.marginTop = "200px";
@@ -153,22 +148,18 @@ gameboy.appendChild(btn1);
 let btn2 = document.createElement('div');
 btn2.className = 'btn2';
 gameboy.appendChild(btn2);
+// fin gameboy
 
-/* fin gameboy */
+// let articles = ["Tee-shirt Addict", "Tee-shirt Air", "Tee-shirt Champignon", "Tee-shirt Dino", "Tee-shirt Geek", "Tee-shirt Replay", "Sweat Alice", "Sweat Geek", "Sweat Mario", "Sweat Donkey kong", "Sweat Blanche Neige", "Sweat Breaking Bad", "Basket America", "Basket Batman", "Basket Flash", "Basket Flash2", "Basket Ironman", "Basket Superman", "Casquette Champignon", "Casquette Love", "Casquette Mario noire", "Casquette Mario rouge", "Art-Print Apple Juice", "Art-Print Cooking Time", "Art-Print Link Floyd", "Art-Print Msociety", "Art-Print TWD", "Art-Print Wise Monkey"];
 
-
-/* let articles = ["Tee-shirt Addict", "Tee-shirt Air", "Tee-shirt Champignon", "Tee-shirt Dino", "Tee-shirt Geek", "Tee-shirt Replay", "Sweat Alice", "Sweat Geek", "Sweat Mario", "Sweat Donkey kong", "Sweat Blanche Neige", "Sweat Breaking Bad", "Basket America", "Basket Batman", "Basket Flash", "Basket Flash2", "Basket Ironman", "Basket Superman", "Casquette Champignon", "Casquette Love", "Casquette Mario noire", "Casquette Mario rouge", "Art-Print Apple Juice", "Art-Print Cooking Time", "Art-Print Link Floyd", "Art-Print Msociety", "Art-Print TWD", "Art-Print Wise Monkey"]; */
-
-
-// creation des card en js 
-
+// création des card en js  
     // initialiser une variable div
     let divparent = document.createElement('div');
     divparent.className="row d-flex justify-content-center";
     divparent.style.marginTop="30px";
     divparent.style.marginBottom="30px";
     let articles = ["Tee-shirt Addict", "Tee-shirt Air", "Tee-shirt Champignon", "Tee-shirt Dino", "Tee-shirt Geek", "Tee-shirt Replay", "Sweat Alice", "Sweat Geek", "Sweat Mario", "Sweat Donkey kong", "Sweat Blanche Neige", "Sweat Breaking Bad", "Basket America", "Basket Batman", "Basket Flash", "Basket Flash2", "Basket Ironman", "Basket Superman", "Casquette Champignon", "Casquette Love", "Casquette Mario noire", "Casquette Mario rouge", "Art-Print Apple Juice", "Art-Print Cooking Time", "Art-Print Link Floyd", "Art-Print Msociety", "Art-Print TWD", "Art-Print Wise Monkey"];
-    // boucle for pour inserter tous sa 
+    // boucle for pour insérer les articles
     for (let i = 0; i <= 27; i++) {
         
         var childDiv = document.createElement('div');
@@ -210,7 +201,7 @@ gameboy.appendChild(btn2);
         panier.setAttribute('onclick','updateBtn()');
         panier.id="article" + i;
         childDiv.appendChild(panier);
-
+     
         if (i == 0) {
             childDiv.id = "tee-shirt";
         }
@@ -233,17 +224,16 @@ gameboy.appendChild(btn2);
 
     }
     document.querySelector('main').insertAdjacentElement("afterend",divparent );
-// fin de la craetion de test 
+// fin de la création des card
 
 // condition pour ajouter au pannier 
-// jouer un song a chaque fois quil est dans le panier plus ajout 
-var btn = document.querySelectorAll('button');
-// tableau images
+    // jouer un song a chaque fois quil est dans le panier plus ajout 
+    var btn = document.querySelectorAll('button');
+    // tableau images
 
 imgArticles = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg', '11.jpg', '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg', '17.jpg', '18.jpg', '19.jpg', '20.jpg', '21.jpg', '22.jpg', '23.jpg', '24.jpg', '25.jpg', '26.jpg', '27.jpg'];
 
 // formulaire
-
 let contact = document.createElement('p');
 contact.className = "contact";
 contact.id = "nous_contacter";
@@ -287,16 +277,13 @@ let formBtn = document.createElement('button');
 formBtn.className = "form-btn";
 formBtn.textContent = "Envoyer !";
 form.appendChild(formBtn);
-
 // fin de formulaire
 
-
-
-
 // fonction pour ajouter au panier
-// ajout  dun son
-var audio = new Audio('assets/song/piece.mp3');
-// fin de song
+    // ajout  d'un son
+    var audio = new Audio('assets/song/piece.mp3');
+    // fin de son
+
 var i = 0;
 childDivModalH5.textContent="Votre Panier (" + i +" Articles Dans votre panier )" ;
 function updateBtn() 
@@ -327,16 +314,13 @@ function updateBtn()
         childDivModalContenerShop.appendChild(childDivModalContenerArticles);
     }
 }
-// jouer un song a chaque ajout au panier
 
-// creation de span pour les notification article panier
-var notify = document.createElement('span');
-notify.id='notify';
-modalButton.appendChild(notify);
-// fin de lacreationde notification 
-
-
-
+// jouer un son à chaque ajout au panier
+    // création de span pour les notifications article/panier
+    var notify = document.createElement('span');
+    notify.id='notify';
+    modalButton.appendChild(notify);
+    // fin de la création de notification 
 
 var audio1 = new Audio('assets/song/stratup.mp3');
 audio1.play();
