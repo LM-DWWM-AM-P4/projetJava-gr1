@@ -452,6 +452,12 @@ a[href="#nous_contacter"] {
 
 /* formulaire */
 
+.contact {
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+}
+
 form {
     margin: auto;
     width: 80%;
