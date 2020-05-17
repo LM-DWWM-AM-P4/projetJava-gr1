@@ -158,6 +158,36 @@ gameboy.appendChild(btn2);
     divparent.className="row d-flex justify-content-center";
     divparent.style.marginTop="30px";
     divparent.style.marginBottom="30px";
+    
+    let describ = [`Tee shirt addict 100% coton, fabriqué en France <br> -Les mythiques 3 bandes <br>Logo brodé.<br> Conseils d\'entretien:<br>- Lavable en machine 30° max<br>- Lavage à l'envers<br>- Pas de séchage en machine ou de lavage à sec<br>- Repassage à l'envers en évitant le visuel <br>Nous vous conseillons de prendre votre taille habituelle.`, 
+    `Tee shirt Air 100% coton, fabriqué en France. <br>Logo brodé. <br>Conseils d'entretien: <br>- Lavable en machine 30° max <br>- Lavage à l'envers <br>- Pas de séchage en machine ou de lavage à sec <br>- Repassage à l'envers en évitant le visuel <br>Nous vous conseillons de prendre votre taille habituelle`,
+    `Tee shirt champignon 100% coton, fabriqué en France. <br>Logo brodé. <br>Conseils d'entretien: <br>- Lavable en machine 30° max <br>- Lavage à l'envers <br>- Pas de séchage en machine ou de lavage à sec <br>- Repassage à l'envers en évitant le visuel <br>Nous vous conseillons de prendre votre taille habituelle.`,
+    `Tee shirt Dino Sportif 100% coton, fabriqué en France <br>Mieux qu'un coq ... un Dino sportif <br>Logo brodé. <br>Conseils d'entretien: <br>- Lavable en machine 30° max <br>- Lavage à l'envers <br>- Pas de séchage en machine ou de lavage à sec <br>- Repassage à l'envers en évitant le visuel <br>Nous vous conseillons de prendre votre taille habituelle.`,
+    `Tee shirt Geek F 100% coton, fabriqué en France <br>Logo brodé. <br>Conseils d'entretien: <br>- Lavable en machine 30° max <br>- Lavage à l'envers <br>- Pas de séchage en machine ou de lavage à sec <br>- Repassage à l'envers en évitant le visuel <br>Nous vous conseillons de prendre votre taille habituelle.`,
+    `Tee shirt reeplay 100% coton, fabriqué en France. <br>Logo brodé. <br>Conseils d'entretien: <br>- Lavable en machine 30° max <br>- Lavage à l'envers <br>- Pas de séchage en machine ou de lavage à sec <br>- Repassage à l'envers en évitant le visuel <br>Nous vous conseillons de prendre votre taille habituelle.`,
+    `Sweat-shirt Alice (We Are Geeks) 100% coton, fabriqué en France. <br>Alice intègre le cercle très fermé de notre série We Are Geeks qui a déjà accueilli Chuck Norris, Tom Selleck ou encore Monsieur Spock. <br>Le personnage créé par Lewis Carroll porte haut les couleurs du pays des merveilles... <br>Et les couleurs d'Otaku. <br>Conseils d'entretien: <br>- Lavable en machine 30° max <br>- Lavage à l'envers <br>- Pas de séchage en machine ou de lavage à sec <br>- Repassage à l'envers en évitant le visuel <br>Nous vous conseillons de prendre votre taille habituelle.`,
+    `Sweat-shirt Comme des Fuckingeeks 100% coton, fabriqué en France. <br>Le sweat-shirt Comme des Fuckingeeks est la parodie du slogan d'une célèbre marque japonaise qui aime utiliser des expressions françaises. <br>Vous avez trouvé de qui il s'agit ? <br>Conseils d'entretien: <br>- Lavable en machine 30° max <br>- Lavage à l'envers <br>- Pas de séchage en machine ou de lavage à sec <br>- Repassage à l'envers en évitant le visuel <br>Nous vous conseillons de prendre votre taille habituelle.`,
+    `Sweat-shirt Mario Pocket (Here we go) 100% coton, fabriqué au France. <br>Sweat-shirt pocket à la gloire de Mario qui vous motivera tout au long de la journée du fond de votre poche. <br>Here we go ! <br>Et puis avoir un plombier sur soi en permanence, ça peut servir. <br>On ne sait jamais... <br>Conseils d'entretien: <br>- Lavable en machine 30° max <br>- Lavage à l'envers <br>- Pas de séchage en machine ou de lavage à sec <br>- Repassage à l'envers en évitant le visuel <br>Nous vous conseillons de prendre votre taille habituelle.`,
+    `Sweat-shirt DONKEY POCKET WEED 100% coton, fabriqué au France. <br>Ce sweat-shirt représente un Donkey Kong très décontracté (lunettes de soleil, collier de fleurs, chemise hawaïenne...) bien caché derrière une forêt un peu particulière... <br>Conseils d'entretien: <br>- Lavable en machine 30° max <br>- Lavage à l'envers <br>- Pas de séchage en machine ou de lavage à sec <br>- Repassage à l'envers en évitant le visuel <br>Nous vous conseillons de prendre votre taille habituelle`,
+    `Sweat-shirt crew SNOW WHITE 100% coton, fabriqué en France. <br>Blanche Neige aime les jeux vidéo ! Vous l'ignoriez ? <br>Pourtant, on voit bien sur ce sweat-shirt que l'héroïne imaginée par Disney kiffe sa Nintendo DS. <br>We are geeks et on en est super fiers. <br>Logo brodé. <br>Conseils d'entretien: <br>- Lavable en machine 30° max <br>- Lavage à l'envers <br>- Pas de séchage en machine ou de lavage à sec <br>- Repassage à l'envers en évitant le visuel <br>Nous vous conseillons de prendre votre taille habituelle`,
+    `Sweat-shirt crew WW 100% coton, fabriqué en France. <br>Logo brodé. <br>Détournement du logo Walt Disney qui devient le symbole de la toute puissance de Walter White, le héros de la série culte Breaking Bad. <br>Un sweat-shirt pour les fans d'Heisenberg. <br>Conseils d'entretien: <br>- Lavable en machine 30° max <br>- Lavage à l'envers <br>- Pas de séchage en machine ou de lavage à sec <br>- Repassage à l'envers en évitant le visuel <br>Nous vous conseillons de prendre votre taille habituelle`,
+    `Découvrez les chaussures à l’effigie de vos super-héros préférez ! <br>Chaussures CAPTAIN AMERICA. <br>Du 38 au 45. <br>COMPOSITION : <br>- Tige : Cuir <br>-  Doublure : Synthétique <br>-  Semelle int. : Textile <br>-  Semelle ext. : Caoutchouc <br>Fabriquées en Allemagne.`,
+    `Découvrez les chaussures à l’effigie de vos super-héros préférez ! <br>Chaussures BATMAN. <br>Du 38 au 45. <br>COMPOSITION : <br>- Tige : Cuir <br>-  Doublure : Synthétique <br>-  Semelle int. : Textile <br>-  Semelle ext. : Caoutchouc <br>Fabriquées en Allemagne.`,
+    `Découvrez les chaussures à l’effigie de vos super-héros préférez ! <br>Chaussures FLASH. <br>Du 38 au 45. <br>COMPOSITION : <br>- Tige : Cuir <br>-  Doublure : Synthétique <br>-  Semelle int. : Textile <br>-  Semelle ext. : Caoutchouc <br>Fabriquées en Allemagne.`,
+    `Découvrez les chaussures à l’effigie de vos super-héros préférez ! <br>Chaussures FLASH2. <br>Du 38 au 45. <br>COMPOSITION : <br>- Tige : Cuir <br>-  Doublure : Synthétique <br>-  Semelle int. : Textile <br>-  Semelle ext. : Caoutchouc <br>Fabriquées en Allemagne.`,
+    `Découvrez les chaussures à l’effigie de vos super-héros préférez ! <br>Chaussures IRONMAN. <br>Du 38 au 45. <br>COMPOSITION : <br>- Tige : Cuir <br>-  Doublure : Synthétique <br>-  Semelle int. : Textile <br>-  Semelle ext. : Caoutchouc <br>Fabriquées en Allemagne.`,
+    `Découvrez les chaussures à l’effigie de vos super-héros préférez ! <br>Chaussures SUPERMAN. <br>Du 38 au 45. <br>COMPOSITION : <br>- Tige : Cuir <br>-  Doublure : Synthétique <br>-  Semelle int. : Textile <br>-  Semelle ext. : Caoutchouc <br>Fabriquées en Allemagne.`,
+    `Collaboration Starter Mush. <br>Casquette snapback avec le mush (champignon) inspiré de l’univers de Mario mais en version très vénère !!! <br>Casquette snapback brodée MUSH VNR. <br>Taille unique.`, 
+    `Une casquette 5 panel en hommage à Pac Man. <br>Casquette Five Panel snapback brodée LOVE. <br>Taille unique.`, 
+    `Une casquette pour les (nombreux) fans de Mario et du motif camouflage. <br>Casquette snapback Mario Camo. <br>Taille unique.`, 
+    `La casquette de Mario, le célèbbre plombier de Nintendo. <br>Casquette snapback brodée LOGO MARIO. <br>Taille unique.`,
+    `ART PRINT APPLE JUICE <br>Impression au format 40x50cm avec une marge blanche de 2cm sur papier haute qualité satiné.`,
+    `ART PRINT COOKING TIME <br>Impression au format 40x50cm avec une marge blanche de 2cm sur papier haute qualité satiné.`,
+    `ART PRINT LINK FLOYD <br>Impression au format 40x50cm avec une marge blanche de 2cm sur papier haute qualité satiné.`,
+    `ART PRINT APPLE MSOCIETY <br>Impression au format 40x50cm avec une marge blanche de 2cm sur papier haute qualité satiné.`,
+    `ART PRINT LINK THE WALKING DEAD <br>Impression au format 40x50cm avec une marge blanche de 2cm sur papier haute qualité satiné.`,
+    `ART PRINT APPLE WISE MONKEY <br>Impression au format 40x50cm avec une marge blanche de 2cm sur papier haute qualité satiné.`];
+    
     let articles = ["Tee-shirt Addict", "Tee-shirt Air", "Tee-shirt Champignon", "Tee-shirt Dino", "Tee-shirt Geek", "Tee-shirt Replay", "Sweat Alice", "Sweat Geek", "Sweat Mario", "Sweat Donkey kong", "Sweat Blanche Neige", "Sweat Breaking Bad", "Basket America", "Basket Batman", "Basket Flash", "Basket Flash2", "Basket Ironman", "Basket Superman", "Casquette Champignon", "Casquette Love", "Casquette Mario noire", "Casquette Mario rouge", "Art-Print Apple Juice", "Art-Print Cooking Time", "Art-Print Link Floyd", "Art-Print Msociety", "Art-Print TWD", "Art-Print Wise Monkey"];
     // boucle for pour insérer les articles
     for (let i = 0; i <= 27; i++) {
@@ -183,7 +213,7 @@ gameboy.appendChild(btn2);
 
         let Descript = document.createElement('p');
         Descript.className="card-text font-weight-light";
-        Descript.innerHTML="Some quick example text to build on the card title and make up the bulk of the card's content.<br><i><b>Ref.00"+i;
+        Descript.innerHTML=describ[i] + "<br><i><b>Ref.00"+i;
         childDiv.appendChild(Descript);
 
         let price = document.createElement('p');
@@ -235,14 +265,17 @@ imgArticles = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8
 
 // formulaire
 let contact = document.createElement('p');
-contact.className = "contact";
+contact.className = "contact text-white text-center h3 mb-2 mt-5";
 contact.id = "nous_contacter";
+contact.style.marginBottom = "0px"
+contact.style.fontWeight="bold";
 contact.textContent = "Pour nous contacter, merci de remplir le formulaire :";
 document.querySelector('footer').insertAdjacentElement("afterbegin", contact);
 
 let classLabel = ['Nom', 'Prénom', 'Email']
 
 let form = document.createElement('form');
+form.id="form";
 document.querySelector('footer').insertAdjacentElement("beforeend", form);
 
 for (let i = 0; i <= 3; i++) {
@@ -305,14 +338,14 @@ function updateBtn()
         console.log('+99');
         notify.textContent = "99+";
     }
-    if(title.textContent == "Tee-shirt Addict")
-    {
+
+    
 
         let childDivModalContenerArticles = document.createElement('div');
         childDivModalContenerArticles.className="modal-body";
         childDivModalContenerArticles.textContent="Tee-shirt Addict 15,00€"
         childDivModalContenerShop.appendChild(childDivModalContenerArticles);
-    }
+    
 }
 
 // jouer un son à chaque ajout au panier

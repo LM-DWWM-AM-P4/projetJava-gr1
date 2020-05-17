@@ -438,6 +438,14 @@ a[href="#nous_contacter"] {
 
 /* fin de gameboy */
 
+/* card */
+
+.card-text {
+    text-align: justify;
+    padding: 5px;
+    font-size: 0.7em;
+}
+
 /* formulaire */
 .contact {
     color: white;
@@ -480,3 +488,8 @@ input, textarea {
 /* fin de formulaire */
 
 /* --------------------------------------------------------------------------------------------------------- */
+
+#form
+{
+    margin-top: -530px;
+}
