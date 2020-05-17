@@ -21,7 +21,7 @@ let list = ['#tee-shirt','#sweat','#shoes','#accessories', '#art-print','#nous_c
 for (let i = 0; i < list.length; i++) {
     var menuList = document.createElement('a');
 
-    menuList.href=list[i];
+    menuList.href = list[i];
     menuList.id = list[i]; 
 
     menu.appendChild(menuList);
@@ -210,6 +210,27 @@ gameboy.appendChild(btn2);
         panier.setAttribute('onclick','updateBtn()');
         panier.id="article" + i;
         childDiv.appendChild(panier);
+
+        if (i == 0) {
+            childDiv.id = "tee-shirt";
+        }
+
+        if (i == 6) {
+            childDiv.id = "sweat";
+        }
+
+        if (i == 12) {
+            childDiv.id = "shoes";
+        }
+
+        if (i == 18) {
+            childDiv.id = "accessories";
+        }
+
+        if (i == 22) {
+            childDiv.id = "art-print";
+        }
+
     }
     document.querySelector('main').insertAdjacentElement("afterend",divparent );
 // fin de la craetion de test 
@@ -223,10 +244,16 @@ imgArticles = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8
 
 // formulaire
 
+let contact = document.createElement('p');
+contact.className = "contact";
+contact.id = "nous_contacter";
+contact.textContent = "Pour nous contacter, merci de remplir le formulaire :";
+document.querySelector('footer').insertAdjacentElement("afterbegin", contact);
+
 let classLabel = ['Nom', 'Prénom', 'Email']
 
 let form = document.createElement('form');
-document.querySelector('footer').insertAdjacentElement("afterbegin", form);
+document.querySelector('footer').insertAdjacentElement("beforeend", form);
 
 for (let i = 0; i <= 3; i++) {
 
