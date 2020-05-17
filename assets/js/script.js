@@ -1,6 +1,8 @@
+// creation de la nav-bar 
 let body = document.querySelector('body');
 let nav = document.createElement('nav');
 nav.className="navbar navbar-expand-lg navbar-light fixed-top";
+
 document.getElementById('header').insertAdjacentElement('afterbegin', nav);
 
 let logo = document.createElement('a');
@@ -14,38 +16,103 @@ let list = ['#tee-shirt','#sweat','#shoes','#accessories', '#art-print','#nous_c
 for (let i = 0; i < list.length; i++) {
     var menuList = document.createElement('a');
 
-     menuList.href=list[i];
+    menuList.href=list[i];
     menuList.id = list[i]; 
 
     menu.appendChild(menuList);
 }
 document.querySelector('a').insertAdjacentElement('afterend', menu);
-
-/*
-let gameBoy = document.createElement('div');
-gameBoy.id="gameboy";
-document.querySelector('main').insertAdjacentElement("afterbegin",gameBoy);
-
-document.getElementById('gameboy').className=" text-white justify-content-center d-flex bg-image";
-document.getElementById('gameboy').style.width="100%";
-document.getElementById('gameboy').style.height="378px";
-document.getElementById('gameboy').style.marginTop="150px"
+// fin nav-bar
 
 
-let vitre = document.createElement('div');
-vitre.id="vitre";
-document.getElementById('gameboy').insertAdjacentElement("afterbegin",vitre);
 
-document.getElementById('vitre').style.width="416px";
-document.getElementById('vitre').style.height="324px";
-document.getElementById('vitre').className=" mt-3 bg-img";
-*/
+// creation du boutton mdal pour le panier 
+let modalButton = document.createElement('button');
+modalButton.className="btn btn-primary mb-3";
+modalButton.dataset.toggle = 'modal';
+modalButton.dataset.target = '#exampleModalLong';
+modalButton.id='modal-panier';
+menu.appendChild(modalButton);
+document.querySelector('ul').insertAdjacentElement('afterend', menu);
+// fin de la créationdu bouton 
 
+
+
+// création de la modal panier
+let divParentModal = document.createElement('div');
+divParentModal.id = "exampleModalLong";
+    divParentModal.className = "modal fade z-index";
+    divParentModal.setAttribute('tabindex','-1');
+    divParentModal.setAttribute('role','dialog');
+    divParentModal.setAttribute('aria-labelledby','exampleModalLongTitle');
+    divParentModal.setAttribute('aria-hidden','true');
+
+let childDivModal = document.createElement('div');
+    childDivModal.className="modal-dialog";
+    childDivModal.setAttribute('role','document');
+    divParentModal.appendChild(childDivModal);
+        
+let childDivModalContent = document.createElement('div');
+    childDivModalContent.className="modal-content";
+    childDivModal.appendChild(childDivModalContent)
+
+let childDivModalHeader = document.createElement('div');
+    childDivModalHeader.className="modal-header";
+    childDivModalContent.appendChild(childDivModalHeader);
+
+let childDivModalH5 = document.createElement('h5');
+    childDivModalH5.className="modal-title";
+    childDivModalH5.id="exampleModalLongTitle";
+    childDivModalH5.textContent="Votre Panier"
+    childDivModalHeader.appendChild(childDivModalH5);
+
+let childDivModalButton = document.createElement('button');
+    childDivModalButton.type="button";
+    childDivModalButton.className="close";
+    childDivModalButton.dataset.dismiss = 'modal';
+    childDivModalButton.setAttribute('aria-label','Close');
+    childDivModalHeader.appendChild(childDivModalButton);
+
+let childDivModalSpan = document.createElement('Span');
+    childDivModalSpan.setAttribute('aria-hidden','true');
+    childDivModalSpan.innerHTML="&times;"
+    childDivModalButton.appendChild(childDivModalSpan);
+
+let childDivModalContenerShop = document.createElement('div');
+    childDivModalContenerShop.className="modal-body";
+    childDivModalContenerShop.textContent="modal-bodymodal-bodymodal-bodymodal-bodymodal-bodymodal-bodymodal-body"
+    childDivModalContent.appendChild(childDivModalContenerShop);
+
+let childDivModalContenerFooter = document.createElement('div');
+    childDivModalContenerFooter.className="modal-footer";
+    childDivModalContent.appendChild(childDivModalContenerFooter);
+
+let childDivModalButtonClose = document.createElement('button');
+    childDivModalButtonClose.type="button";
+    childDivModalButtonClose.className="btn btn-secondary";
+    childDivModalButtonClose.textContent="Fermer";
+    childDivModalContenerFooter.appendChild(childDivModalButtonClose);  
+    
+let childDivModalButtonSave = document.createElement('button');
+    childDivModalButtonSave.type="button";
+    childDivModalButtonSave.className="btn btn-primary";
+    childDivModalButtonSave.textContent="Commander"
+    childDivModalContenerFooter.appendChild(childDivModalButtonSave);
+    
+    
+document.querySelector('header').insertAdjacentElement('afterbegin', divParentModal);
+// fin de la creation modal panier
+
+
+// PacMan Menu
 var pacman = document.getElementById('#pacman');
 pacman.addEventListener('click', function(){
     pacman.className="rotate";
 
 });
+// Fin du PacMan Menu
+
+
 
 /* gameboy */
 
@@ -98,6 +165,7 @@ gameboy.appendChild(btn2);
 
         let imgcard = document.createElement('img');
         imgcard.className="card-img-top";
+        imgcard.src="assets/img/images_articles/"+i+".jpg";
         childDiv.appendChild(imgcard);
 
         let divContainer = document.createElement('div');
@@ -105,13 +173,13 @@ gameboy.appendChild(btn2);
         childDiv.appendChild(divContainer);
 
         let title = document.createElement('h5');
-        title.className="card-title";
+        title.className="card-title text-center h5 font-weight-bold text-uppercase";
         title.textContent=articles[i];
         childDiv.appendChild(title);
 
         let Descript = document.createElement('p');
-        Descript.className="card-text";
-        Descript.textContent="Some quick example text to build on the card title and make up the bulk of the card's content.";
+        Descript.className="card-text font-weight-light";
+        Descript.innerHTML="Some quick example text to build on the card title and make up the bulk of the card's content.<br><i><b>Ref.00"+i;
         childDiv.appendChild(Descript);
 
         let price = document.createElement('p');
@@ -126,6 +194,7 @@ gameboy.appendChild(btn2);
         panier.style.width="80%";
         panier.style.margin="auto";
         panier.textContent="Ajouter au panier !";
+        panier.onclick = "" ;
         panier.id="article" + i;
         childDiv.appendChild(panier);
     }
@@ -155,16 +224,41 @@ for (let i = 0; i <= 3; i++) {
     formGroup.appendChild(label);
 
     let input = document.createElement('input');
-    input.className = "form-control"
     formGroup.appendChild(input);
     }
 
     if (i == 3) {
+        let formGroup = document.createElement('div');
+        formGroup.className = "form-group";
+        form.appendChild(formGroup);
+
         let label = document.createElement('label');
         label.textContent = "Objet";
-        form.appendChild(label);
+        formGroup.appendChild(label);
         let textarea = document.createElement('textarea');
-        textarea.className = "form-control";
-        form.appendChild(textarea);
+        formGroup.appendChild(textarea);
     }
 }
+
+let formBtn = document.createElement('button');
+formBtn.className = "form-btn";
+formBtn.textContent = "Envoyer !";
+form.appendChild(formBtn);
+
+// fin de formulaire
+
+// jouer un song a chaque fois quil est dans le panier
+var audio = new Audio('assets/song/piece.mp3');
+var btn = document.querySelectorAll('button')
+
+for (let i = 0; i < 28; i++) {
+    btn[i].addEventListener('click', updateBtn);
+}
+function updateBtn() 
+{
+    audio.play();
+}
+// fin de song
+
+var audio1 = new Audio('assets/song/stratup.mp3');
+audio1.play();
