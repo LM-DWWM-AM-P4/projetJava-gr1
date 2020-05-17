@@ -167,6 +167,7 @@ gameboy.appendChild(btn2);
     divparent.className="row d-flex justify-content-center";
     divparent.style.marginTop="30px";
     divparent.style.marginBottom="30px";
+    let describ = ['Tee shirt addict 100% coton, fabriqué en France <br> -Les mythiques 3 bandes <br>Logo brodé.<br> Conseils d\'entretien:<br>- Lavable en machine 30° max<br>- Lavage à l\'envers<br>- Pas de séchage en machine ou de lavage à sec<br>- Repassage à l\'envers en évitant le visuel <br>Nous vous conseillons de prendre votre taille habituelle.'];
     let articles = ["Tee-shirt Addict", "Tee-shirt Air", "Tee-shirt Champignon", "Tee-shirt Dino", "Tee-shirt Geek", "Tee-shirt Replay", "Sweat Alice", "Sweat Geek", "Sweat Mario", "Sweat Donkey kong", "Sweat Blanche Neige", "Sweat Breaking Bad", "Basket America", "Basket Batman", "Basket Flash", "Basket Flash2", "Basket Ironman", "Basket Superman", "Casquette Champignon", "Casquette Love", "Casquette Mario noire", "Casquette Mario rouge", "Art-Print Apple Juice", "Art-Print Cooking Time", "Art-Print Link Floyd", "Art-Print Msociety", "Art-Print TWD", "Art-Print Wise Monkey"];
     // boucle for pour inserter tous sa 
     for (let i = 0; i <= 27; i++) {
@@ -192,7 +193,7 @@ gameboy.appendChild(btn2);
 
         let Descript = document.createElement('p');
         Descript.className="card-text font-weight-light";
-        Descript.innerHTML="Some quick example text to build on the card title and make up the bulk of the card's content.<br><i><b>Ref.00"+i;
+        Descript.innerHTML=describ[i] + "<br><i><b>Ref.00"+i;
         childDiv.appendChild(Descript);
 
         let price = document.createElement('p');
@@ -245,14 +246,17 @@ imgArticles = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8
 // formulaire
 
 let contact = document.createElement('p');
-contact.className = "contact";
+contact.className = "contact text-white text-center h3 mb-2 mt-5";
 contact.id = "nous_contacter";
+contact.style.marginBottom = "0px"
+contact.style.fontWeight="bold";
 contact.textContent = "Pour nous contacter, merci de remplir le formulaire :";
 document.querySelector('footer').insertAdjacentElement("afterbegin", contact);
 
 let classLabel = ['Nom', 'Prénom', 'Email']
 
 let form = document.createElement('form');
+form.id="form";
 document.querySelector('footer').insertAdjacentElement("beforeend", form);
 
 for (let i = 0; i <= 3; i++) {
@@ -318,14 +322,14 @@ function updateBtn()
         console.log('+99');
         notify.textContent = "99+";
     }
-    if(title.textContent == "Tee-shirt Addict")
-    {
+
+    
 
         let childDivModalContenerArticles = document.createElement('div');
         childDivModalContenerArticles.className="modal-body";
         childDivModalContenerArticles.textContent="Tee-shirt Addict 15,00€"
         childDivModalContenerShop.appendChild(childDivModalContenerArticles);
-    }
+    
 }
 // jouer un song a chaque ajout au panier
 
