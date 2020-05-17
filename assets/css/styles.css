@@ -126,22 +126,6 @@ body {
 }
 
 /* Creation de notification pour le panier  */
-/* #notify
-{
-    display: block;
-    width:35px ;
-    height: 35px;
-    margin-top: 41px;
-    margin-left: -16px;
-    background-color: white;
-    border: 3px solid black;
-    color: black;
-    font-weight: 900;
-    border-radius: 50%;
-    transform: scaleX(-1);
-
-} */
-
 .notifyTrue
 {
     visibility: visible ;
@@ -157,11 +141,6 @@ body {
     border-radius: 50%;
     transform: scaleX(-1);
 }
-/* .notifyFalse
-{
-    visibility: hidden;
-} */
-
 /* fin Creation de notification pour le panier  */
 
 
@@ -460,12 +439,6 @@ a[href="#nous_contacter"] {
 /* fin de gameboy */
 
 /* formulaire */
-
-.contact {
-    text-align: center;
-    color: white;
-    padding-top: 10px;
-}
 
 form {
     margin: auto;
