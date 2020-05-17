@@ -107,6 +107,10 @@ body {
 {
     animation: none !important;
 }
+.noStatic
+{
+    animation: spin-reverse 2s infinite linear;
+}
 /* ----------- */
 /* --------------------------------------------------------------------------------------------------------- */
 /* Placement modal Panier */
@@ -114,6 +118,11 @@ body {
 {
     left: 716px;
     top: 92px;
+    box-shadow: none;
+}
+.btn-primary:focus
+{
+    box-shadow: none !important;
 }
 
 /* Creation de notification pour le panier  */

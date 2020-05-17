@@ -35,7 +35,7 @@ function static(){
 }
 // fin static
 function nostatic(){
-    document.getElementById('modal-panier').className="btn btn-primary mb-3 static";
+    document.getElementById('modal-panier').className="btn btn-primary mb-3 noStatic";
 }
 // -----------------------------------------------------------------------------------
 
@@ -77,7 +77,7 @@ let childDivModalHeader = document.createElement('div');
 let childDivModalH5 = document.createElement('h5');
     childDivModalH5.className="modal-title";
     childDivModalH5.id="exampleModalLongTitle";
-    childDivModalH5.textContent="Votre Panier"
+    
     childDivModalHeader.appendChild(childDivModalH5);
 
 let childDivModalButton = document.createElement('button');
@@ -90,6 +90,7 @@ let childDivModalButton = document.createElement('button');
 let childDivModalSpan = document.createElement('Span');
     childDivModalSpan.setAttribute('aria-hidden','true');
     childDivModalSpan.innerHTML="&times;"
+    childDivModalSpan.setAttribute('onclick','nostatic()');
     childDivModalButton.appendChild(childDivModalSpan);
 
 let childDivModalContenerShop = document.createElement('div');
@@ -184,7 +185,7 @@ gameboy.appendChild(btn2);
         divContainer.className="card-body";
         childDiv.appendChild(divContainer);
 
-        let title = document.createElement('h5');
+        var title = document.createElement('h5');
         title.className="card-title text-center h5 font-weight-bold text-uppercase";
         title.textContent=articles[i];
         childDiv.appendChild(title);
@@ -270,13 +271,13 @@ form.appendChild(formBtn);
 var audio = new Audio('assets/song/piece.mp3');
 // fin de song
 var i = 0;
-
+childDivModalH5.textContent="Votre Panier (" + i +" Articles Dans votre panier )" ;
 function updateBtn() 
 {
     audio.play();
-
+    
     i++;
-
+    childDivModalH5.textContent="Votre Panier (" + i +" Articles Dans votre panier )" ;
     notify.textContent = i;
 
 
@@ -290,15 +291,14 @@ function updateBtn()
         console.log('+99');
         notify.textContent = "99+";
     }
-
+    if(title.textContent == "Tee-shirt Addict")
+    {
 
         let childDivModalContenerArticles = document.createElement('div');
         childDivModalContenerArticles.className="modal-body";
-        childDivModalContenerArticles.textContent="modal-bodymodal-bodymodal-bodymodal-bodymodal-bodymodal-bodymodal-body"
+        childDivModalContenerArticles.textContent="Tee-shirt Addict 15,00€"
         childDivModalContenerShop.appendChild(childDivModalContenerArticles);
-
-    
-
+    }
 }
 // jouer un song a chaque ajout au panier
 
