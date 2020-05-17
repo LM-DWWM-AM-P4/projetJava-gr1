@@ -134,7 +134,6 @@ document.querySelector('header').insertAdjacentElement('afterbegin', divParentMo
 var pacman = document.getElementById('#pacman');
 pacman.addEventListener('click', function(){
     pacman.className="rotate";
-
 });
 // Fin du PacMan Menu
 
@@ -144,6 +143,7 @@ pacman.addEventListener('click', function(){
 
 let gameboy = document.createElement('div');
 gameboy.className = 'gameboy';
+gameboy.style.marginTop = "200px";
 main.appendChild(gameboy);
 
 let screen = document.createElement('div');
@@ -177,7 +177,8 @@ gameboy.appendChild(btn2);
     // initialiser une variable div
     let divparent = document.createElement('div');
     divparent.className="row d-flex justify-content-center";
-    divparent.style.marginTop="120px";
+    divparent.style.marginTop="30px";
+    divparent.style.marginBottom="30px";
     let articles = ["Tee-shirt Addict", "Tee-shirt Air", "Tee-shirt Champignon", "Tee-shirt Dino", "Tee-shirt Geek", "Tee-shirt Replay", "Sweat Alice", "Sweat Geek", "Sweat Mario", "Sweat Donkey kong", "Sweat Blanche Neige", "Sweat Breaking Bad", "Basket America", "Basket Batman", "Basket Flash", "Basket Flash2", "Basket Ironman", "Basket Superman", "Casquette Champignon", "Casquette Love", "Casquette Mario noire", "Casquette Mario rouge", "Art-Print Apple Juice", "Art-Print Cooking Time", "Art-Print Link Floyd", "Art-Print Msociety", "Art-Print TWD", "Art-Print Wise Monkey"];
     // boucle for pour inserter tous sa 
     for (let i = 0; i <= 27; i++) {
@@ -221,12 +222,63 @@ gameboy.appendChild(btn2);
         panier.id="article" + i;
         childDiv.appendChild(panier);
     }
-    document.querySelector('main').insertAdjacentElement("afterbegin",divparent );
+    document.querySelector('main').insertAdjacentElement("afterend",divparent );
 // fin de la craetion de test 
 
 // condition pour ajouter au pannier 
 // jouer un song a chaque fois quil est dans le panier plus ajout 
 var btn = document.querySelectorAll('button');
+// tableau images
+
+imgArticles = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg', '11.jpg', '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg', '17.jpg', '18.jpg', '19.jpg', '20.jpg', '21.jpg', '22.jpg', '23.jpg', '24.jpg', '25.jpg', '26.jpg', '27.jpg'];
+
+// formulaire
+
+let classLabel = ['Nom', 'Prénom', 'Email']
+
+let form = document.createElement('form');
+document.querySelector('footer').insertAdjacentElement("afterbegin", form);
+
+for (let i = 0; i <= 3; i++) {
+
+    if (i <= 2) {
+    let formGroup = document.createElement('div');
+    formGroup.className = "form-group";
+    form.appendChild(formGroup);
+    
+    let label = document.createElement('label');
+    label.textContent = classLabel[i];
+    formGroup.appendChild(label);
+
+    let input = document.createElement('input');
+    formGroup.appendChild(input);
+    }
+
+    if (i == 3) {
+        let formGroup = document.createElement('div');
+        formGroup.className = "form-group";
+        form.appendChild(formGroup);
+
+        let label = document.createElement('label');
+        label.textContent = "Objet";
+        formGroup.appendChild(label);
+        let textarea = document.createElement('textarea');
+        formGroup.appendChild(textarea);
+    }
+}
+
+let formBtn = document.createElement('button');
+formBtn.className = "form-btn";
+formBtn.textContent = "Envoyer !";
+form.appendChild(formBtn);
+
+// fin de formulaire
+
+// fonction pour ajouter au panier
+
+// ajout  dun son
+var audio = new Audio('assets/song/piece.mp3');
+// fin de song
 
 for (let i = 0; i < 28; i++) {
     if (btn[i].textContent == "Ajouter au panier !" ) {
@@ -238,8 +290,8 @@ function updateBtn()
     console.log('clicker');
     audio.play();
 }
-// fin de song
 // jouer un song a chaque ajout au panier
 
-var audio = new Audio('assets/song/piece.mp3');
-// fin de song
+
+var audio1 = new Audio('assets/song/stratup.mp3');
+audio1.play();
