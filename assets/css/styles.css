@@ -489,7 +489,21 @@ input, textarea {
 
 /* --------------------------------------------------------------------------------------------------------- */
 
-#form
+/* #form
 {
     margin-top: -530px;
+} */
+.hidden{
+    visibility: hidden;
+    display: none;
+}
+
+
+
+#placage
+{
+    margin-top: 120px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
 }

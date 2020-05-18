@@ -187,10 +187,10 @@ gameboy.appendChild(btn2);
     `ART PRINT APPLE MSOCIETY <br>Impression au format 40x50cm avec une marge blanche de 2cm sur papier haute qualité satiné.`,
     `ART PRINT LINK THE WALKING DEAD <br>Impression au format 40x50cm avec une marge blanche de 2cm sur papier haute qualité satiné.`,
     `ART PRINT APPLE WISE MONKEY <br>Impression au format 40x50cm avec une marge blanche de 2cm sur papier haute qualité satiné.`];
-    
+    var prices = ['19.99','19.99','19.99','19.99','19.99','19.99','34.99','34.99','34.99','34.99','34.99','34.99','124.99','124.99','124.99','124.99','124.99','124.99','25.99','25.99','25.99','25.99','39.99','39.99','39.99','39.99','39.99','39.99']
     let articles = ["Tee-shirt Addict", "Tee-shirt Air", "Tee-shirt Champignon", "Tee-shirt Dino", "Tee-shirt Geek", "Tee-shirt Replay", "Sweat Alice", "Sweat Geek", "Sweat Mario", "Sweat Donkey kong", "Sweat Blanche Neige", "Sweat Breaking Bad", "Basket America", "Basket Batman", "Basket Flash", "Basket Flash2", "Basket Ironman", "Basket Superman", "Casquette Champignon", "Casquette Love", "Casquette Mario noire", "Casquette Mario rouge", "Art-Print Apple Juice", "Art-Print Cooking Time", "Art-Print Link Floyd", "Art-Print Msociety", "Art-Print TWD", "Art-Print Wise Monkey"];
     // boucle for pour insérer les articles
-    for (let i = 0; i <= 27; i++) {
+    for (var ref = 0; ref <= 27; ref++) {
         
         var childDiv = document.createElement('div');
         childDiv.className="card mt-5 mr-5";
@@ -199,7 +199,7 @@ gameboy.appendChild(btn2);
 
         let imgcard = document.createElement('img');
         imgcard.className="card-img-top";
-        imgcard.src="assets/img/images_articles/"+i+".jpg";
+        imgcard.src="assets/img/images_articles/"+ref+".jpg";
         childDiv.appendChild(imgcard);
 
         let divContainer = document.createElement('div');
@@ -208,18 +208,19 @@ gameboy.appendChild(btn2);
 
         var title = document.createElement('h5');
         title.className="card-title text-center h5 font-weight-bold text-uppercase";
-        title.textContent=articles[i];
+        title.textContent=articles[ref];
         childDiv.appendChild(title);
 
         let Descript = document.createElement('p');
         Descript.className="card-text font-weight-light";
-        Descript.innerHTML=describ[i] + "<br><i><b>Ref.00"+i;
+        Descript.innerHTML=describ[ref] + "<br><i><b>Ref.00"+ref;
         childDiv.appendChild(Descript);
 
         let price = document.createElement('p');
         price.className="card-text d-flex";
-        price.textContent="15,00€";
+        price.textContent=prices[ref] + "€";
         price.style.marginLeft="80%";
+        price.style.fontSize="15px";
         price.style.fontWeight="bold";
         childDiv.appendChild(price);
 
@@ -229,26 +230,29 @@ gameboy.appendChild(btn2);
         panier.style.margin="auto";
         panier.textContent="Ajouter au panier !";
         panier.setAttribute('onclick','updateBtn()');
-        panier.id="article" + i;
+        panier.id="article" + ref;
         childDiv.appendChild(panier);
      
-        if (i == 0) {
+
+        
+
+        if (ref == 0) {
             childDiv.id = "tee-shirt";
         }
 
-        if (i == 6) {
+        if (ref == 6) {
             childDiv.id = "sweat";
         }
 
-        if (i == 12) {
+        if (ref == 12) {
             childDiv.id = "shoes";
         }
 
-        if (i == 18) {
+        if (ref == 18) {
             childDiv.id = "accessories";
         }
 
-        if (i == 22) {
+        if (ref == 22) {
             childDiv.id = "art-print";
         }
 
@@ -324,6 +328,7 @@ function updateBtn()
     audio.play();
     
     i++;
+
     childDivModalH5.textContent="Votre Panier (" + i +" Articles Dans votre panier )" ;
     notify.textContent = i;
 
@@ -338,15 +343,39 @@ function updateBtn()
         console.log('+99');
         notify.textContent = "99+";
     }
+// les articles dans le panier
+    if(articles[0])
+    {
 
-    
-
-        let childDivModalContenerArticles = document.createElement('div');
+    let childDivModalContenerArticles = document.createElement('div');
         childDivModalContenerArticles.className="modal-body";
-        childDivModalContenerArticles.textContent="Tee-shirt Addict 15,00€"
+        childDivModalContenerArticles.textContent=articles[0] +" "+prices[0] +" "+"X"+ qte;
         childDivModalContenerShop.appendChild(childDivModalContenerArticles);
     
+    let upQuantite  = document.createElement('button');
+        upQuantite.className = "btn btn-success";
+        upQuantite.style.width="10px";
+        upQuantite.textContent="+";
+        upQuantite.setAttribute('onclick','up()');
+        childDivModalContenerShop.appendChild(upQuantite);
+
+
+
+        if (i > 1)
+        {
+            console.log(i);
+            childDivModalContenerArticles.className="hidden";
+            upQuantite.className="hidden";
+            childDivModalContenerArticlesTotal.className="hidden";
+        }
+    } 
+ 
+    let childDivModalContenerArticlesTotal = document.createElement('div');
+        childDivModalContenerArticlesTotal.className="modal-body";
+        childDivModalContenerArticlesTotal.textContent="Prix du panier total :" + Math.round(i*prices[0]) ;
+        childDivModalContenerFooter.appendChild(childDivModalContenerArticlesTotal);
 }
+
 
 // jouer un son à chaque ajout au panier
     // création de span pour les notifications article/panier
@@ -357,3 +386,7 @@ function updateBtn()
 
 var audio1 = new Audio('assets/song/stratup.mp3');
 audio1.play();
+
+
+
+
