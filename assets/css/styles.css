@@ -324,8 +324,9 @@ a[href="#nous_contacter"] {
     height: 200px;
     top: 15px;
     left: 28px;
-    background-image: url(../img/images_articles/chaussures/b015.jpg);
+    background-image: url(../img/GEEK-WEARS/unnamed.png);
     background-size: cover;
+    background-repeat: no-repeat;
     box-shadow: inset 4px 4px rgba(0, 0, 0, 0.1);
     content: "";
 }
