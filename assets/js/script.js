@@ -487,37 +487,17 @@ function updateBtn()
         notify.textContent = "99+";
     }
 // les articles dans le panier
-    if(articles[0])
-    {
+
 
     let childDivModalContenerArticles = document.createElement('div');
         childDivModalContenerArticles.className="modal-body";
-        childDivModalContenerArticles.textContent=articles[0] +" "+prices[0] +" "+"X"+ qte;
+        childDivModalContenerArticles.textContent=articles[0] +" "+prices[0];
         childDivModalContenerShop.appendChild(childDivModalContenerArticles);
     
-    let upQuantite  = document.createElement('button');
-        upQuantite.className = "btn btn-success";
-        upQuantite.style.width="10px";
-        upQuantite.textContent="+";
-        upQuantite.setAttribute('onclick','up()');
-        childDivModalContenerShop.appendChild(upQuantite);
 
 
-
-        if (i > 1)
-        {
-            console.log(i);
-            childDivModalContenerArticles.className="hidden";
-            upQuantite.className="hidden";
-            childDivModalContenerArticlesTotal.className="hidden";
-        }
-    } 
- 
-    let childDivModalContenerArticlesTotal = document.createElement('div');
-        childDivModalContenerArticlesTotal.className="modal-body";
-        childDivModalContenerArticlesTotal.textContent="Prix du panier total :" + Math.round(i*prices[0]) ;
-        childDivModalContenerFooter.appendChild(childDivModalContenerArticlesTotal);
 }
+
 
 
 // jouer un son à chaque ajout au panier
