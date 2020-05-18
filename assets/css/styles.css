@@ -494,8 +494,8 @@ input, textarea {
     margin-top: -530px;
 } */
 .hidden{
-    visibility: hidden;
-    display: none;
+    visibility: hidden !important;
+    display: none !important;
 }
 
 

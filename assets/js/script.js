@@ -194,6 +194,7 @@ gameboy.appendChild(btn2);
         
         var childDiv = document.createElement('div');
         childDiv.className="card mt-5 mr-5";
+        childDiv.id=ref;
         childDiv.style.width="18rem";
         divparent.appendChild(childDiv);
 
@@ -259,7 +260,149 @@ gameboy.appendChild(btn2);
     }
     document.querySelector('main').insertAdjacentElement("afterend",divparent );
 // fin de la création des card
+document.getElementById('#tee-shirt').addEventListener('click',function(){
+    
+    document.getElementById('sweat').className="hidden";
+    document.getElementById('7').className="hidden";
+    document.getElementById('8').className="hidden";
+    document.getElementById('9').className="hidden";
+    document.getElementById('10').className="hidden";
+    document.getElementById('11').className="hidden";
+    document.getElementById('shoes').className="hidden";
+    document.getElementById('13').className="hidden";
+    document.getElementById('14').className="hidden";
+    document.getElementById('15').className="hidden";
+    document.getElementById('16').className="hidden";
+    document.getElementById('17').className="hidden";
+    document.getElementById('accessories').className="hidden";
+    document.getElementById('19').className="hidden";
+    document.getElementById('20').className="hidden";
+    document.getElementById('21').className="hidden";
+    document.getElementById('art-print').className="hidden";
+    document.getElementById('23').className="hidden";
+    document.getElementById('24').className="hidden";
+    document.getElementById('25').className="hidden";
+    document.getElementById('26').className="hidden";
+    document.getElementById('27').className="hidden";
 
+    
+
+});
+
+document.getElementById('#sweat').addEventListener('click',function(){
+    
+    document.getElementById('tee-shirt').className="hidden";
+    document.getElementById('1').className="hidden";
+    document.getElementById('2').className="hidden";
+    document.getElementById('3').className="hidden";
+    document.getElementById('4').className="hidden";
+    document.getElementById('5').className="hidden";
+    document.getElementById('shoes').className="hidden";
+    document.getElementById('13').className="hidden";
+    document.getElementById('14').className="hidden";
+    document.getElementById('15').className="hidden";
+    document.getElementById('16').className="hidden";
+    document.getElementById('17').className="hidden";
+    document.getElementById('accessories').className="hidden";
+    document.getElementById('19').className="hidden";
+    document.getElementById('20').className="hidden";
+    document.getElementById('21').className="hidden";
+    document.getElementById('art-print').className="hidden";
+    document.getElementById('23').className="hidden";
+    document.getElementById('24').className="hidden";
+    document.getElementById('25').className="hidden";
+    document.getElementById('26').className="hidden";
+    document.getElementById('27').className="hidden";
+
+    
+
+});
+document.getElementById('#shoes').addEventListener('click',function(){
+    
+    document.getElementById('tee-shirt').className="hidden";
+    document.getElementById('1').className="hidden";
+    document.getElementById('2').className="hidden";
+    document.getElementById('3').className="hidden";
+    document.getElementById('4').className="hidden";
+    document.getElementById('5').className="hidden";
+    document.getElementById('sweat').className="hidden";
+    document.getElementById('7').className="hidden";
+    document.getElementById('8').className="hidden";
+    document.getElementById('9').className="hidden";
+    document.getElementById('10').className="hidden";
+    document.getElementById('11').className="hidden";
+    document.getElementById('accessories').className="hidden";
+    document.getElementById('19').className="hidden";
+    document.getElementById('20').className="hidden";
+    document.getElementById('21').className="hidden";
+    document.getElementById('art-print').className="hidden";
+    document.getElementById('23').className="hidden";
+    document.getElementById('24').className="hidden";
+    document.getElementById('25').className="hidden";
+    document.getElementById('26').className="hidden";
+    document.getElementById('27').className="hidden";
+
+    
+
+});
+document.getElementById('#accessories').addEventListener('click',function(){
+    
+    document.getElementById('tee-shirt').className="hidden";
+    document.getElementById('1').className="hidden";
+    document.getElementById('2').className="hidden";
+    document.getElementById('3').className="hidden";
+    document.getElementById('4').className="hidden";
+    document.getElementById('5').className="hidden";
+    document.getElementById('sweat').className="hidden";
+    document.getElementById('7').className="hidden";
+    document.getElementById('8').className="hidden";
+    document.getElementById('9').className="hidden";
+    document.getElementById('10').className="hidden";
+    document.getElementById('11').className="hidden";
+    document.getElementById('shoes').className="hidden";
+    document.getElementById('13').className="hidden";
+    document.getElementById('14').className="hidden";
+    document.getElementById('15').className="hidden";
+    document.getElementById('16').className="hidden";
+    document.getElementById('17').className="hidden";
+    document.getElementById('art-print').className="hidden";
+    document.getElementById('23').className="hidden";
+    document.getElementById('24').className="hidden";
+    document.getElementById('25').className="hidden";
+    document.getElementById('26').className="hidden";
+    document.getElementById('27').className="hidden";
+
+    
+
+});
+document.getElementById('#art-print').addEventListener('click',function(){
+    
+    document.getElementById('tee-shirt').className="hidden";
+    document.getElementById('1').className="hidden";
+    document.getElementById('2').className="hidden";
+    document.getElementById('3').className="hidden";
+    document.getElementById('4').className="hidden";
+    document.getElementById('5').className="hidden";
+    document.getElementById('sweat').className="hidden";
+    document.getElementById('7').className="hidden";
+    document.getElementById('8').className="hidden";
+    document.getElementById('9').className="hidden";
+    document.getElementById('10').className="hidden";
+    document.getElementById('11').className="hidden";
+    document.getElementById('shoes').className="hidden";
+    document.getElementById('13').className="hidden";
+    document.getElementById('14').className="hidden";
+    document.getElementById('15').className="hidden";
+    document.getElementById('16').className="hidden";
+    document.getElementById('17').className="hidden";
+    document.getElementById('accessories').className="hidden";
+    document.getElementById('19').className="hidden";
+    document.getElementById('20').className="hidden";
+    document.getElementById('21').className="hidden";
+
+    
+
+});
 // condition pour ajouter au pannier 
     // jouer un song a chaque fois quil est dans le panier plus ajout 
     var btn = document.querySelectorAll('button');
